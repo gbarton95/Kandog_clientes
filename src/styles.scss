@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #1f2937;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111827;
+    color: white;
+}

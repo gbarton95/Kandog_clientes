@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <a routerLink="/">KanDog</a>
+  <a routerLink="/servicios">Servicios</a>
+  <a routerLink="/contacto">Contacto</a>
+
+  <span *ngIf="isLoggedIn()"> {{ userRole() }} | <button (click)="logout()">Logout</button> </span>
+
+  <button *ngIf="!isLoggedIn()" (click)="goToLogin()">Login</button>
+</nav>
