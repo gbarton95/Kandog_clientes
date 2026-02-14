@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <a routerLink="/">KanDog</a>
+  <a routerLink="/servicios">Servicios</a>
+  <a routerLink="/contacto">Contacto</a>
+
+  @if (isLoggedIn()) {
+    <span> {{ userRole() }} | <button (click)="logout()">Logout</button> </span>
+
+  } @else {
+    <button (click)="goToLogin()">Login</button>
+  }
+</nav>

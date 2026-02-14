@@ -1,0 +1,11 @@
+<nav>
+  <a routerLink="/">KanDog</a>
+  <a routerLink="/servicios">Servicios</a>
+  <a routerLink="/contacto">Contacto</a>
+
+  @if (isLoggedIn()) {
+    <span> Cliente | <button>Logout</button> </span>
+  } @else {
+    <a routerLink="/login">Login</a>
+  }
+</nav>

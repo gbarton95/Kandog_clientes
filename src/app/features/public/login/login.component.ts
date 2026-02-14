@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from '../../../core/services/auth';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login-component',
-  imports: [],
-  templateUrl: './login-component.html',
-  styleUrl: './login-component.scss',
-  standalone: true
+  imports: [CommonModule],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss',
+  standalone: true,
 })
 export class LoginComponent {
   username = '';
@@ -16,6 +17,10 @@ export class LoginComponent {
 
   private auth = inject(AuthService);
   private router = inject(Router);
+
+  get isLoggedIn() {
+    return this.auth.isLoggedIn;
+  }
 
   login() {
     // Intentar login con AuthService
